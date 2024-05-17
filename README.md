@@ -1,6 +1,5 @@
 ## omer cohen
 ## omer7530@gmail.com
-#
 
 # Graph and algorithms Project
 
