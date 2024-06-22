@@ -44,11 +44,14 @@ void Graph::loadGraph(const vector<vector<int>> &graph)
                 throw std::invalid_argument("Invalid graph: The graph is not a square matrix.");
             }
         }
-        for (size_t j = 0; j < n; j++) {
-            if (matrix[j][j] == 0) {
-                throw std::invalid_argument("Invalid graph: non zero on diagonal");
-            }
-        }
+        // for (size_t j = 0; j < (size_t)n; j++) {
+        //     if (matrix[j].size() != (size_t)n) {
+        //     throw std::invalid_argument("Invalid graph: matrix row size does not match");
+        //     }
+        //     if (matrix[j][j] == 0) {
+        //         throw std::invalid_argument("Invalid graph: non zero on diagonal");
+        //     }
+        // }
         this->matrix = graph;
         this->isDirected = !(is_simetric_help(this->matrix));
         this->isNegativeEdges = is_negative_edges_help(this->matrix);
